@@ -1,7 +1,7 @@
 ---
 id: doc1
 title: Style Guide
-sidebar_label: Style Guide
+routeBasePath: '/'
 slug: /
 ---
 
@@ -43,7 +43,7 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 
 1. First ordered list item
 1. Another item
-   - Unordered sub-list.
+   *  Unordered sub-list.
 1. Actual numbers don't matter, just that it's a number
    1. Ordered sub-list
 1. And another item.
