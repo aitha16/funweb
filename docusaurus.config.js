@@ -1,33 +1,59 @@
 module.exports = {
-  title: 'My Site',
-  tagline: 'The tagline of my site',
-  url: 'https://your-docusaurus-test-site.com',
+  title: 'Zomato',
+  tagline: 'Food',
+  url: 'https://myzomato.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/zLogo.ico',
   organizationName: 'facebook', // Usually your GitHub org/user name.
   projectName: 'docusaurus', // Usually your repo name.
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en', 'fr'],
+    localeConfigs: {
+      en: {
+        label: 'English',
+      },
+      fr: {
+        label: 'Français',
+      },
+    },
+  },
   themeConfig: {
+    announcementBar: {
+          id: 'gettheapp',
+          content: '<a target="_blank" href="https://www.zomato.com/mobile">Get tapp</a>',
+          backgroundColor: '#d61e1e',
+          textColor: 'white',
+    },
+    prism: {
+      theme: require('prism-react-renderer/themes/github'),
+    },
     navbar: {
-      title: 'Zomat',
       style: 'primary',
+      hideOnScroll: true,
       logo: {
         alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        src: 'img/zLogo.svg',
       },
       
       items: [
         {
-          to: 'docs/',
-          activeBasePath: 'docs',
-          label: 'Docs',
-          position: 'left',
+          
+          type: 'localeDropdown',
+          position: 'right',
         },
-        {to: 'blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/facebook/docusaurus',
-          label: 'GitHub',
+          id: 'ttt',
+          label: 'Get the App',
+          href: 'https://www.zomato.com/mobile',
+          position: 'right',
+        },
+        {
+          id: 'ttt',
+          href: 'https://zomato.com',
+          label: 'Order Now!',
           position: 'right',
         },
       ],
@@ -36,50 +62,41 @@ module.exports = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'About Zomato',
           items: [
             {
-              label: 'Style Guide',
-              to: 'docs/',
+              label: 'About Us',
+              href: 'https://www.zomato.com/about',
             },
             {
-              label: 'Second Doc',
-              to: 'docs/doc2/',
+              label: 'Culture',
+              href: 'https://culture.zomato.com/',
             },
           ],
         },
         {
-          title: 'Community',
+          title: 'For Foodies',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: 'Code of Conduct',
+              href: 'https://www.zomato.com/policies',
             },
             {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
+              label: 'Community',
+              href: 'http://community.zomato.com/',
             },
             {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
-            },
-          ],
-        },
-        {
-          title: 'More',
-          items: [
-            {
-              label: 'Blog',
-              to: 'blog',
-            },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              label: 'Developers',
+              href: 'https://developers.zomato.com/',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      logo: {
+        alt: 'zomato',
+        src: 'img/zLogo.svg'
+      },
+      copyright: `Copyright © ${new Date().getFullYear()} Zomato Private Limited`,
     },
   },
   presets: [
@@ -89,14 +106,16 @@ module.exports = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
+          routeBasePath: '/',
+    
           editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/',
+            'https://github.com/aitha16/funweb/tree/main/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/blog/',
+            'https://github.com/aitha16/funweb/tree/main/blog/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
